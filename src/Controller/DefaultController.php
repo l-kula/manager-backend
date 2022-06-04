@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
+use OpenApi\Annotations as OA;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use OpenApi\Annotations as OA;
 
 /**
  * Class DefaultController.
@@ -27,6 +27,6 @@ class DefaultController
      */
     public function index(): Response
     {
-        return new Response("Hello World");
+        return new Response('Hello World');
     }
 }

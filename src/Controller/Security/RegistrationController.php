@@ -7,7 +7,6 @@ use App\Form\Security\RegistrationType;
 use Doctrine\Persistence\ManagerRegistry;
 use OpenApi\Annotations as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -45,9 +44,9 @@ class RegistrationController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            return $this->json("Success");
+            return $this->json('Success');
         }
 
-        return $this->json("Error");        
+        return $this->json('Error');
     }
 }
